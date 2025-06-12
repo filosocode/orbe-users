@@ -12,10 +12,10 @@ import (
 var DB *gorm.DB
 
 func ConectarDB() {
-	dsn := "host=localhost user=postgres password=BRM dbname=orbe port=5432 sslmode=disable"
+	dsn := "host=db user=postgres password=BRM dbname=orbe port=5432 sslmode=disable"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
-		log.Fatal("❌ Error al conectar a la base de datos: ", err)
+		log.Fatal("Error al conectar a la base de datos: ", err)
 	}
 
 	DB = db
@@ -24,6 +24,6 @@ func ConectarDB() {
 	// Auto migración del modelo Usuario
 	err = db.AutoMigrate(&nucleo.Usuario{})
 	if err != nil {
-		log.Fatal("❌ Error al migrar el modelo Usuario: ", err)
+		log.Fatal("Error al migrar el modelo Usuario: ", err)
 	}
 }
