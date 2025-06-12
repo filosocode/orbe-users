@@ -103,7 +103,7 @@ http://localhost:8080/usuarios
 ]
 ```
 
-### 🔎 Obtener usuario por ID (`GET /usuarios/1`)
+### Obtener usuario por ID (`GET /usuarios/1`)
 
 **URL:**
 
@@ -126,7 +126,7 @@ http://localhost:8080/usuarios/1
 }
 ```
 
-### Eliminar usuario (`DELETE /usuarios/1`)
+### 🗑 Eliminar usuario (`DELETE /usuarios/1`)
 
 **URL:**
 
@@ -134,6 +134,21 @@ http://localhost:8080/usuarios/1
 http://localhost:8080/usuarios/1
 ```
 
+## ¿Qué aprendí?
+
+- Cómo estructurar una API en Go usando Clean Architecture
+- Integrar Gin con GORM y PostgreSQL
+- Separar lógica por capas: controlador, servicio y repositorio
+- Migraciones automáticas y uso de GORM
+- Pruebas de endpoints REST usando Thunder Client
+
+## Qué mejoraría
+
+- Encriptar contraseñas antes de almacenarlas
+- Validaciones más completas en los handlers
+- Agregar autenticación JWT
+- Crear tests automatizados con `testing` y `testify`
+- Agregar Docker y Docker Compose para facilitar el despliegue
 
 ## Autor
 
